@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "target": "es2016",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "strict-api-endpoints/*": ["build/*"]
+    },
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./build",
+    "declarationDir": "./build",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/__tests__/*", "build"]
+}

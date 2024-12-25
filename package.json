@@ -1,0 +1,42 @@
+{
+  "name": "strict-api-endpoints",
+  "version": "1.0.0",
+  "description": "This npm package provides a utility to generate strict TypeScript types for nested API endpoint paths. It ensures type safety and autocompletion for deeply nested API configurations, making your development process more robust and efficient.",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd ../ && tsc --build --force",
+    "build:watch": "npm run build -- --watch",
+    "start": "node scripts/copy-package-json.js && cd build && yarn link && npm run build:watch",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "npx eslint .",
+    "prepublish": "npm run lint",
+    "version": "npm run format && node scripts/copy-package-json.js&& git add -A src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheriffmohammad/strict-api-endpoints"
+  },
+  "keywords": [
+    "TypeScript",
+    "Strict Typing",
+    "API Endpoints"
+  ],
+  "author": "Sherif El-Saidy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheriffmohammad/strict-api-endpoints/issues"
+  },
+  "homepage": "https://github.com/sheriffmohammad/strict-api-endpoints#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  }
+}
